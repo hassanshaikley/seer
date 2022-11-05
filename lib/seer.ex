@@ -1,13 +1,12 @@
 defmodule Seer do
   import Plug.Conn
 
-  @locales ["en", "fr", "de"]
+  @moduledoc """
+  Plug that compares the path entered with available paths.
+  Sorts all the path available in relation to the pathe entered by the Jaro Distance.
+  """
 
   def init(default), do: default
-
-  # def call(%Plug.Conn{params: %{"locale" => loc}} = conn, _default) when loc in @locales do
-  #   assign(conn, :locale, loc)
-  # end
 
   def call(conn, default) do
     target_path = conn.request_path
