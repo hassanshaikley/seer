@@ -15,7 +15,13 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/seer](https://hexdocs.pm/seer).
+Add Seer to your dependencies above the Router
 
+```elixir
+  plug Seer
+  plug SeerTestWeb.Router
+```
+
+This automatically puts routes into conn.assigns.seer.paths in the order of Jaro Distance.
+
+Then you can do something like take the top 5 and display them to a user whenever a 404 happens.
