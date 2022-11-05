@@ -1,6 +1,10 @@
 # Seer
 
-**TODO: Add description**
+Show the closest endpoints to what the user is entering by the Jaro Distance.
+
+For instance if you have have `api/v1/route` and the user enters `api/v2/route` it will put `[`api/v1/route`, other routes]` inside of `conn.assigns.seer.paths`.
+
+Note: It returns all the routes in order of similarity. If you want to limit it to only the first or first few you have to manually limit the results you want to return.
 
 ## Installation
 
