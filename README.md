@@ -19,7 +19,7 @@ def deps do
 end
 ```
 
-Add Seer to your dependencies above the Router
+Add Seer to your endpoint file above the Router
 
 ```elixir
   plug Seer
